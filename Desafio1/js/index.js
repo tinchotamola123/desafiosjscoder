@@ -20,7 +20,7 @@ while (texto1 != "ESC") {
     console.log(resultado2);
     texto1 = prompt("Ingrese otro texto: ")
 }
-*/
+
 //Ejemplo 3:
 
 let numero2 = 0;
@@ -29,4 +29,16 @@ numero2 = parseInt(prompt("Ingresa la cantidad de veces que quiere ver HOLA: "))
 console.log(numero2);
 for(let i=1 ; i<=numero2 ; i++){   
     console.log(`${i} Hola`);    
+}
+
+//Ejemplo 4:
+*/
+let edad = 0;
+let resultado4 = "";
+
+edad= parseInt(prompt("Ingrese su edad: "));
+if (edad>=18) {
+    alert("Es mayor de esad y puede conducir");
+} else {
+    alert("No es mayor y no puede conducir");
 }
