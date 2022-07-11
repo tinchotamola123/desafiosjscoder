@@ -1,4 +1,3 @@
-/*
 // Ejemplo 1:
 
 let numero1 = 0;
@@ -32,7 +31,7 @@ for(let i=1 ; i<=numero2 ; i++){
 }
 
 //Ejemplo 4:
-*/
+
 let edad = 0;
 let resultado4 = "";
 
@@ -42,3 +41,5 @@ if (edad>=18) {
 } else {
     alert("No es mayor y no puede conducir");
 }
+
+//Ejemplo 5:
