@@ -3,7 +3,7 @@
 let numero1 = 0;
 let resultado = 0;
 for(let i=0 ; i<5 ; i++){
-    numero1=parseInt(prompt("Ingrese un numero: "));
+    numero1=parseInt(prompt("Ingrese un numero para sumarle 10: "));
     
     resultado = numero1 + 10;
     alert(resultado);
@@ -47,7 +47,7 @@ if (edad>=18) {
 let nota=0;
 let resultado5="";
 
-nota = parseInt(prompt("Ingrese la nota obtenida: "));
+nota = parseInt(prompt("Ingrese la nota obtenida(emtre 1 y 10): "));
 
 if (nota>=0 && nota <= 3) {
     alert("Muy deficiente");
@@ -61,4 +61,6 @@ if (nota>=0 && nota <= 3) {
     alert("Notable");
 }else if (nota>9 && nota <= 10) {
     alert("Sobresaliente");
+}else{
+    alert("No coincide con las notas pedidas")
 }
