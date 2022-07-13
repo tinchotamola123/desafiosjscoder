@@ -1,5 +1,5 @@
 // Ejemplo 1:
-
+//Ingresar 5 valores a los cuales le voy a sumar 10 en cada iteracion
 let numero1 = 0;
 let resultado = 0;
 for(let i=0 ; i<5 ; i++){
@@ -10,7 +10,7 @@ for(let i=0 ; i<5 ; i++){
 }
 
 //Ejemplo 2:
-
+//Pide ingresar textos y los va concatenando hasta poner ESC que corta el while
 let texto1 = "";
 let resultado2 ="El texto ingresado es: ";
 texto1 = prompt("Ingrese un texto (para cancelar ESC): ")
@@ -21,7 +21,8 @@ while (texto1 != "ESC") {
 }
 
 //Ejemplo 3:
-
+//Pide que ingrese la cantidad de veces que quiere ver la palabra hola
+//luego muestra x veces el hola.
 let numero2 = 0;
 let resultado3="";
 numero2 = parseInt(prompt("Ingresa la cantidad de veces que quiere ver HOLA: "));
@@ -31,7 +32,7 @@ for(let i=1 ; i<=numero2 ; i++){
 }
 
 //Ejemplo 4:
-
+//Pide la edad si es menor de 18 no puede manejar , si es mayo de 18 si puede conducir
 let edad = 0;
 let resultado4 = "";
 
@@ -43,7 +44,7 @@ if (edad>=18) {
 }
 
 //Ejemplo 5:
-
+//Pide una nota entre 1 y 10 , y la califica desde muy deficiente hasta sobresaliente
 let nota=0;
 let resultado5="";
 
