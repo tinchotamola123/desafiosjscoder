@@ -48,6 +48,28 @@ let carrito = 0;
 
 let seleccion = 0;
 
+//constructor para los objetos productos
+function Producto(nombre,precio,cantidad){
+    this.nombre = nombre;
+    this.precio = precio;
+    this.cantidad = cantidad;
+    this.disponible = true;
+}
+
+const producto1 = new Producto("Clasicas",150,150,true);
+const producto2 = new Producto("Especiales",200,100,true);
+const producto3 = new Producto("Nigiris",250,45,true);
+const producto4 = new Producto("Geishas",300,40,true);
+
+//declaro un array de productos y pusheo los objetos
+let Productos =[];
+Productos.push(producto1);
+Productos.push(producto2);
+Productos.push(producto3);
+Productos.push(producto4);
+
+//menu desplegable de opciones para el usuario 
+
 while (seleccion != 6) {
 
     //el usuario ingresa que quiere comprar
@@ -138,7 +160,7 @@ while (seleccion != 6) {
 
     // finalizando el loop
 
-    // este if es quien ayuda al caso 6 del switch a cortar el loop el infinito
+    // este if cortar el loop
 
     if (seleccion === 6) {
 
@@ -148,28 +170,29 @@ while (seleccion != 6) {
 
 }
 
-//constructor para los objetos productos
-function Producto(nombre,precio,cantidad){
-    this.nombre = nombre;
-    this.precio = precio;
-    this.cantidad = cantidad;
-    this.disponible = true;
-}
-
-const producto1 = new Producto("Clasicas",150,50,true);
-const producto2 = new Producto("Especiales",200,50,true);
-const producto3 = new Producto("Nigiris",250,50,true);
-const producto4 = new Producto("Geishas",300,50,true);
-
-//declaro un array de productos y pusheo los objetos
-let Productos =[];
-Productos.push(producto1);
-Productos.push(producto2);
-Productos.push(producto3);
-Productos.push(producto4);
-
 //recorro el array
 for(let i=0 ; i<Productos.length ; i++){
     //console.log(Productos[i]);
     console.log(`Nombre de piezas: ${Productos[i].nombre} y el Precio es: $${Productos[i].precio}`)
 }
+
+//Producto con poca cantidad menos de 50.
+let producPocaCant = Productos.filter(producto => producto.cantidad <= 50);
+//console.log(producPocaCant);
+console.log("Productos con poca cantidad:");
+for (const e of producPocaCant){
+    console.log(`Nombre: ${e.nombre} Cantidad: ${e.cantidad}`);
+}
+
+//productos ordenados por cantidad 
+//nuevo array para ordenarlos
+let productosOrdenadosCant = [];
+productosOrdenadosCant = Productos.map(e => e);
+productosOrdenadosCant.sort(function(menor,mayor){
+    return menor.cantidad - mayor.cantidad;
+})
+console.log("Productos ordenadas por cantidad");
+console.log(productosOrdenadosCant);
+
+
+
