@@ -37,12 +37,18 @@ input{
 #BtnEnviar{
     margin-left: 10px;
 }
-p{
-    background-color: white;
-    color: black;
-    
+#caja{
+    color: white;
 }
-.box{
+.boxNegra{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxRoja{
     width: 150px;
     height: 150px;
     background-color: black;

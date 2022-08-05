@@ -33,9 +33,5 @@ formulario.addEventListener('submit',(event)=>{
 //Evento de mouseover para cambiar de color la caja a roja.
 const caja = document.getElementById("Caja");
 caja.addEventListener('mouseover',(e)=>{
-    //console.log(e);
-    caja.style.background ="red";
-        if(caja.style.background === "red"){
-            caja.style.background = "black";
-        }
+    caja.classList.toggle("boxRoja");
 })
