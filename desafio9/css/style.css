@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+h1{
+    padding: 1rem;
+}
+h2{
+    padding: 1rem;
+    text-decoration-line: underline;
+}
+.container{
+    padding: 3rem;
+}
+label{
+    font-size: 2rem;
+}
+input{
+    font-size: 1.5rem;
+}
+.botones{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#BtnEnviar{
+    margin-left: 10px;
+}
+p{
+    background-color: white;
+    color: black;
+    
+}
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error{
+    width: 200px;
+    height: auto;
+}
