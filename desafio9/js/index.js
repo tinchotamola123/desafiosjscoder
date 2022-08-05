@@ -5,9 +5,13 @@ const password =document.getElementById("Password");
 const formulario = document.getElementById("Formulario");
 const error = document.getElementById("Error");
 error.style.color ="red";
+
 //escucho el evento submit
 formulario.addEventListener('submit',(event)=>{
     event.preventDefault()
+    console.log(nombre.value);
+    console.log(email.value);
+    console.log(password.value);
     let mensajeError = [];
     //expresion regular para validar el email
     let regexEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ ;
