@@ -7,7 +7,9 @@ body {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "header" "main" "footer"; }
+  grid-template-areas: "header"
+ "main"
+ "footer"; }
 
 header {
   grid-area: header; }
@@ -49,7 +51,12 @@ header {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, auto);
-  grid-template-areas: "portada portada portada portada" "carusel carusel carusel carusel" "video1 video1 video2 video2" "nosotros1 nosotros1 nosotros2 nosotros2" "piezas piezas piezas piezas" "foto1 foto2 foto3 foto4";
+  grid-template-areas: "portada portada portada portada"
+ "carusel carusel carusel carusel"
+ "video1 video1 video2 video2"
+ "nosotros1 nosotros1 nosotros2 nosotros2"
+ "piezas piezas piezas piezas"
+ "foto1 foto2 foto3 foto4";
   overflow: hidden; }
 
 .portada {
@@ -178,7 +185,8 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "portadacontacto portadacontacto" "formulario mapa";
+  grid-template-areas: "portadacontacto portadacontacto"
+ "formulario mapa";
   overflow: hidden; }
 
 .portadacontacto {
@@ -228,7 +236,9 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "portadamenu portadamenu" "carta1 carta2" "carta3 carta3";
+  grid-template-areas: "portadamenu portadamenu"
+ "carta1 carta2"
+ "carta3 carta3";
   overflow: hidden; }
 
 .portadamenu {
@@ -305,7 +315,8 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  grid-template-areas: "portadanosotros portadanosotros" "fotopagnosotros textopagnosotros";
+  grid-template-areas: "portadanosotros portadanosotros"
+ "fotopagnosotros textopagnosotros";
   overflow: hidden; }
 
 .portadanosotros {
@@ -356,7 +367,14 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(7, auto);
-  grid-template-areas: "portadaproductos portadaproductos" "descproducto1 fotoproducto1" "fotoproducto2 descproducto2" "descproducto3 fotoproducto3" "fotoproducto4 descproducto4" "descproducto5 fotoproducto5" "fotoproducto6 descproducto6";
+  grid-template-areas:
+ "portadaproductos portadaproductos"
+ "descproducto1 fotoproducto1"
+ "fotoproducto2 descproducto2"
+ "descproducto3 fotoproducto3"
+ "fotoproducto4 descproducto4"
+ "descproducto5 fotoproducto5"
+ "fotoproducto6 descproducto6";
   overflow: hidden; }
 
 .portadaproductos {
@@ -377,6 +395,25 @@ header {
       display: flex;
       flex-direction: column;
       font-size: 4.5rem; }
+      .portadaproductos .indexproductos .carrito {
+        font-family: 'Architects Daughter', cursive;
+        color: rgba(233, 231, 231, 0.836);
+        display: flex;
+        padding-top: 70px;
+        flex-direction: column;
+        font-size: 2rem;  }
+        .portadaproductos .indexproductos .carrito a{
+          text-decoration: none;
+          color: rgb(189, 156, 156);
+        }
+        .portadaproductos .indexproductos .carrito:hover {
+          font-family: 'Architects Daughter', cursive;
+          color: rgba(233, 231, 231, 0.836);
+          display: flex;
+          padding-top: 70px;
+          flex-direction: column;
+          font-size: 3rem;  }
+    
 
 .descproducto1 {
   grid-area: descproducto1;
@@ -392,6 +429,14 @@ header {
     flex-direction: column;
     margin: 10px;
     font-size: 3rem; }
+  .descproducto1 .carrito {
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(231, 22, 22, 0.836);
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-decoration: underline;
+    font-size: 2rem; }  
   .descproducto1 p {
     font-family: 'Architects Daughter', cursive;
     color: rgba(255, 255, 255, 0.836);
@@ -431,6 +476,14 @@ header {
     flex-direction: column;
     margin: 10px;
     font-size: 3rem; }
+    .descproducto2 .carrito {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(231, 22, 22, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      text-decoration: underline;
+      font-size: 2rem; }
   .descproducto2 p {
     font-family: 'Architects Daughter', cursive;
     color: rgba(255, 255, 255, 0.836);
@@ -454,6 +507,14 @@ header {
     flex-direction: column;
     margin: 10px;
     font-size: 3rem; }
+    .descproducto3 .carrito {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(231, 22, 22, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      text-decoration: underline;
+      font-size: 2rem; }
   .descproducto3 p {
     font-family: 'Architects Daughter', cursive;
     color: rgba(255, 255, 255, 0.836);
@@ -493,6 +554,14 @@ header {
     flex-direction: column;
     margin: 10px;
     font-size: 3rem; }
+    .descproducto4 .carrito {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(231, 22, 22, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      text-decoration: underline;
+      font-size: 2rem; }
   .descproducto4 p {
     font-family: 'Architects Daughter', cursive;
     color: rgba(255, 255, 255, 0.836);
@@ -516,6 +585,14 @@ header {
     flex-direction: column;
     margin: 10px;
     font-size: 3rem; }
+    .descproducto5 .carrito {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(231, 22, 22, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      text-decoration: underline;
+      font-size: 2rem; }
   .descproducto5 p {
     font-family: 'Architects Daughter', cursive;
     color: rgba(255, 255, 255, 0.836);
@@ -555,6 +632,14 @@ header {
     flex-direction: column;
     margin: 10px;
     font-size: 3rem; }
+    .descproducto6 .carrito {
+      font-family: 'Architects Daughter', cursive;
+      color: rgba(231, 22, 22, 0.836);
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      text-decoration: underline;
+      font-size: 2rem; }
   .descproducto6 p {
     font-family: 'Architects Daughter', cursive;
     color: rgba(255, 255, 255, 0.836);
@@ -601,7 +686,9 @@ header {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, auto);
-    grid-template-areas: "portadacontacto" "formulario" "mapa";
+    grid-template-areas: "portadacontacto"
+ "formulario"
+ "mapa";
     overflow: hidden;
     justify-content: center; }
   .portadacontacto {
@@ -635,7 +722,10 @@ header {
   .mainmenu {
     grid-template-columns: auto;
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "portadamenu" "carta1" "carta2" "carta3"; }
+    grid-template-areas: "portadamenu"
+ "carta1"
+ "carta2"
+ "carta3"; }
   .portadamenu .indexmenu {
     min-height: 25vh; }
     .portadamenu .indexmenu h2 {
@@ -685,7 +775,15 @@ header {
   .mainindex {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(9, auto);
-    grid-template-areas: "portada portada" "carusel carusel" "video1 video1" "video2 video2" "nosotros1 nosotros1" "nosotros2 nosotros2" "piezas piezas" "foto1 foto2" "foto3 foto4"; }
+    grid-template-areas: "portada portada"
+ "carusel carusel"
+ "video1 video1"
+ "video2 video2"
+ "nosotros1 nosotros1"
+ "nosotros2 nosotros2"
+ "piezas piezas"
+ "foto1 foto2"
+ "foto3 foto4"; }
   .portada .index {
     min-height: 50vh; }
     .portada .index h2 {
@@ -713,7 +811,10 @@ header {
   .mainmenu {
     grid-template-columns: auto;
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "portadamenu" "carta1" "carta2" "carta3"; }
+    grid-template-areas: "portadamenu"
+ "carta1"
+ "carta2"
+ "carta3"; }
   .portadamenu .indexmenu {
     min-height: 25vh; }
     .portadamenu .indexmenu h2 {
@@ -761,7 +862,19 @@ header {
   .mainproductos {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(13, auto);
-    grid-template-areas: "portadaproductos" "descproducto1" "fotoproducto1" "descproducto2" "fotoproducto2"  "descproducto3"  "fotoproducto3" "descproducto4" "fotoproducto4"  "descproducto5" "fotoproducto5" "descproducto6" "fotoproducto6"; }
+    grid-template-areas: "portadaproductos"
+ "descproducto1"
+ "fotoproducto1"
+ "descproducto2"
+ "fotoproducto2" 
+ "descproducto3" 
+ "fotoproducto3"
+ "descproducto4"
+ "fotoproducto4" 
+ "descproducto5"
+ "fotoproducto5"
+ "descproducto6"
+ "fotoproducto6"; }
   .portadaproductos .indexproductos {
     min-height: 25vh; }
     .portadaproductos .indexproductos h3 {
@@ -944,7 +1057,9 @@ header {
   .mainnosotros {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "portadanosotros" "fotopagnosotros" "textopagnosotros"; }
+    grid-template-areas: "portadanosotros"
+ "fotopagnosotros"
+ "textopagnosotros"; }
   .portadanosotros .indexnosotros {
     min-height: 25vh; }
     .portadanosotros .indexnosotros h3 {
@@ -963,7 +1078,9 @@ header {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, auto);
-    grid-template-areas: "portadacontacto" "formulario" "mapa";
+    grid-template-areas: "portadacontacto"
+ "formulario"
+ "mapa";
     overflow: hidden;
     justify-content: center; }
   .portadacontacto {
@@ -1046,7 +1163,13 @@ header {
   .mainindex {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(7, auto);
-    grid-template-areas: "portada" "carusel" "video1" "video2" "nosotros1" "nosotros2" "piezas"; }
+    grid-template-areas: "portada"
+ "carusel"
+ "video1"
+ "video2"
+ "nosotros1"
+ "nosotros2"
+ "piezas"; }
   .portada .index {
     min-height: 40vh; }
     .portada .index h2 {
@@ -1302,7 +1425,9 @@ header {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, auto);
-    grid-template-areas: "portadacontacto" "formulario" "mapa";
+    grid-template-areas: "portadacontacto"
+ "formulario"
+ "mapa";
     overflow: hidden; }
   .portadacontacto {
     display: none; }

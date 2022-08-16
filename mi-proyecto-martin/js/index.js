@@ -49,17 +49,20 @@ let carrito = 0;
 let seleccion = 0;
 
 //constructor para los objetos productos
-function Producto(nombre,precio,cantidad){
+function Producto(id,nombre,precio,cantidad){
+    this.id = id;
     this.nombre = nombre;
     this.precio = precio;
     this.cantidad = cantidad;
     this.disponible = true;
 }
 
-const producto1 = new Producto("Clasicas",150,150,true);
-const producto2 = new Producto("Especiales",200,100,true);
-const producto3 = new Producto("Nigiris",250,45,true);
-const producto4 = new Producto("Geishas",300,40,true);
+const producto1 = new Producto(1,"Clásicos",150,200,true);
+const producto2 = new Producto(2,"Cocidos",200,150,true);
+const producto3 = new Producto(3,"Hot Rolls",250,55,true);
+const producto4 = new Producto(4,"Sin Arroz",300,75,true);
+const producto5 = new Producto(5,"Niguiri",350,100,true);
+const producto6 = new Producto(6,"Geisha",400,100,true);
 
 //declaro un array de productos y pusheo los objetos
 let Productos =[];
@@ -67,9 +70,78 @@ Productos.push(producto1);
 Productos.push(producto2);
 Productos.push(producto3);
 Productos.push(producto4);
+Productos.push(producto5);
+Productos.push(producto6);
+
+
+let container = document.querySelector('.carritoCompra');
+
+let article ="";
+
+for(producto of Productos){
+    article +=`
+    <div class="cajaDeCompra">
+                <article class="producto">
+                    <div class="imagenDiv">
+                        <img src="./media/fotos/piezas/clasico.jpg" alt="">
+                    </div>
+                    <h3>Sushi Clásico</h3>
+                    <h4>$150 c/u</h4>
+                    <button class="botonCompra" type="button">Agregar al Carrito</button>
+                </article>
+                <article class="producto">
+                    <div class="imagenDiv">
+                        <img src="./media/fotos/piezas/cocidos.jpg" alt="">
+                    </div>
+                    <h3>Sushi Cocido</h3>
+                    <h4>$200 c/u</h4>
+                    <button class="botonCompra" type="button">Agregar al Carrito</button>
+                </article>
+                <article class="producto">
+                    <div class="imagenDiv">
+                        <img src="./media/fotos/piezas/hotroll.jpg" alt="">
+                    </div>
+                    <h3>Sushi Hot Rolls</h3>
+                    <h4>$250 c/u</h4>
+                    <button class="botonCompra" type="button">Agregar al Carrito</button>
+                </article>
+            </div>
+            <br>
+            <div class="cajaDeCompra">
+                <article class="producto">
+                    <div class="imagenDiv">
+                        <img src="./media/fotos/piezas/sinarroz.jpg" alt="">
+                    </div>
+                    <h3>Sushi Sin Arroz</h3>
+                    <h4>$300 c/u</h4>
+                    <button class="botonCompra" type="button">Agregar al Carrito</button>
+                </article>
+                <article class="producto">
+                    <div class="imagenDiv">
+                        <img src="./media/fotos/piezas/niguiri.jpg" alt="">
+                    </div>
+                    <h3>Sushi Niguiri</h3>
+                    <h4>$350 c/u</h4>
+                    <button class="botonCompra" type="button">Agregar al Carrito</button>
+                </article>
+                <article class="producto">
+                    <div class="imagenDiv">
+                        <img src="./media/fotos/piezas/geisha.png" alt="">
+                    </div>
+                    <h3>Sushi Geisha</h3>
+                    <h4>$400 c/u</h4>
+                    <button class="botonCompra" type="button">Agregar al Carrito</button>
+                </article>
+            </div>`
+}
+
+console.log(Productos);
+
+
+
 
 //menu desplegable de opciones para el usuario 
-
+/*
 while (seleccion != 6) {
 
     //el usuario ingresa que quiere comprar
@@ -169,7 +241,7 @@ while (seleccion != 6) {
     }
 
 }
-
+*/
 //recorro el array
 for(let i=0 ; i<Productos.length ; i++){
     //console.log(Productos[i]);
@@ -193,6 +265,5 @@ productosOrdenadosCant.sort(function(menor,mayor){
 })
 console.log("Productos ordenadas por cantidad");
 console.log(productosOrdenadosCant);
-
 
 
