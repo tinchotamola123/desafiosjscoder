@@ -46,7 +46,7 @@ const {nombre:nombreMartin1 ,...restoPersona} = persona;
 
 console.log(nombreMartin1,restoPersona);
 
-//con el objeto por dentro.
+//con el objeto por dentro...
 
 const {nombre:nombre2 , direccion: {calle , cp}} = persona;
 
