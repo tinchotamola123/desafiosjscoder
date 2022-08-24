@@ -23,6 +23,10 @@ const cantidadTotal = document.getElementById('cantidadTotal')
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    if (sessionStorage.getItem('carrito')){
+        carrito = JSON.parse(sessionStorage.getItem('carrito'))
+        actualizarCarrito()
+    }
     if (localStorage.getItem('carrito')){
         carrito = JSON.parse(localStorage.getItem('carrito'))
         actualizarCarrito()
@@ -31,6 +35,19 @@ document.addEventListener('DOMContentLoaded', () => {
 //SEXTO PASO
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
+    Toastify({
+        text: "Todos los productos eliminados del carrito.",
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+        background: "linear-gradient(to right, rgb(207, 27, 27), rgb(17, 14, 14))",
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
     actualizarCarrito()
 })
 
@@ -47,7 +64,7 @@ stockProductos.forEach((producto)=>{
                     </div>
                     <h3 class="titulo">${producto.nombre}</h3>
                     <h4 class="precio">$${producto.precio} c/u</h4>
-                    <button id="agregar${producto.id}" class="botonCompra">Agregar <i class="fas fa-shopping-cart"></i></button>
+                    <button id="agregar${producto.id}" class="botonCompra">Agregar</button>
     </article>
     `
     contenedorProductos.appendChild(div);
@@ -84,7 +101,7 @@ const agregarAlCarrito = (prodId) => {
                     newWindow: true,
                     close: true,
                     gravity: "top", // `top` or `bottom`
-                    position: "center", // `left`, `center` or `right`
+                    position: "right", // `left`, `center` or `right`
                     stopOnFocus: true, // Prevents dismissing of toast on hover
                     style: {
                     background: "linear-gradient(to right,rgb(207, 27, 27), rgb(17, 14, 14))",
@@ -103,7 +120,7 @@ const agregarAlCarrito = (prodId) => {
             newWindow: true,
             close: true,
             gravity: "top", // `top` or `bottom`
-            position: "center", // `left`, `center` or `right`
+            position: "right", // `left`, `center` or `right`
             stopOnFocus: true, // Prevents dismissing of toast on hover
             style: {
             background: "linear-gradient(to right, rgb(207, 27, 27), rgb(17, 14, 14))",
@@ -129,6 +146,19 @@ const eliminarDelCarrito = (prodId) => {
 
     carrito.splice(indice, 1) //Le pasamos el indice de mi elemento ITEM y borramos 
     // un elemento 
+    Toastify({
+        text: "Eliminado del carrito",
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+        background: "linear-gradient(to right, rgb(207, 27, 27), rgb(17, 14, 14))",
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
     actualizarCarrito() //LLAMAMOS A LA FUNCION QUE CREAMOS EN EL TERCER PASO. CADA VEZ Q SE 
     //MODIFICA EL CARRITO
     console.log(carrito)
@@ -156,6 +186,7 @@ const actualizarCarrito = () => {
 
         contenedorCarrito.appendChild(div)
         
+        sessionStorage.setItem('carrito', JSON.stringify(carrito))
         localStorage.setItem('carrito', JSON.stringify(carrito))
 
     })
@@ -167,7 +198,3 @@ const actualizarCarrito = () => {
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
 }
 
-
-
-
-// redondear los bordes de los botones y las imagenes
