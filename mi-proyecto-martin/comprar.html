@@ -25,14 +25,16 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="./css/estilocarrito.css">
-    
     <meta name="description"
         content="Full Sushi. Conoce nuestras piezas: Clásicas, Cocidas, Hot Rolls, Sin arroz, Niguiri y Geisha.">
     <meta name="keywords"
         content="SUSHI, LOCAL SUSHI, SUSHI PREMIUM, MENDOZA,NUESTRAS PIEZAS, CLÁSICOS, COCIDOS, HOT ROLLS, SIN ARROZ, NIGUIRI, GEISHA">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-        <script src="./js/carrito.js" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/carrito.js" defer></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="./css/estilocarrito.css">
     <!--<script src="./js/index.js" defer></script>-->
     <title>Nuestros Productos | Full Sushi</title>
 </head>
@@ -97,6 +99,7 @@
                 <div class="total-carrito">
                 <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
                 <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+                <button id="compra" class="boton-agregar">Comprar</button>
                 </div>
 
             </div>

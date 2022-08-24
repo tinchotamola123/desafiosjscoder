@@ -12,6 +12,7 @@ const contenedorProductos = document.getElementById('contenedorProductos');
 const contenedorCarrito = document.getElementById('carrito-contenedor');
 
 const botonVaciar = document.getElementById('vaciar-carrito');
+const comprar = document.getElementById('compra');
 
 //SEXTIMO PASO, MODIFICAR LOS CONTADORES
 const contadorCarrito = document.getElementById('contadorCarrito');
@@ -198,3 +199,18 @@ const actualizarCarrito = () => {
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
 }
 
+const realizarCompra = () =>{
+    let total = precioTotal.textContent;
+    console.log(total);    
+    Swal.fire({
+        title: `Compra Realizada Con Éxito! <br> Total: $${precioTotal.textContent}`,
+        imageUrl: 'media/fotos/logo.png',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+    })
+} 
+//evento para realizar la compra
+comprar.addEventListener('click', () => {
+    realizarCompra();
+})
