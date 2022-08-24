@@ -78,12 +78,38 @@ const agregarAlCarrito = (prodId) => {
             // map encuentre cual es el q igual al que está agregado, le suma la cantidad
             if (prod.id === prodId){
                 prod.cantidad++
+                Toastify({
+                    text: "Agregaste otra unidad",
+                    duration: 1000,
+                    newWindow: true,
+                    close: true,
+                    gravity: "top", // `top` or `bottom`
+                    position: "center", // `left`, `center` or `right`
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    style: {
+                    background: "linear-gradient(to right,rgb(207, 27, 27), rgb(17, 14, 14))",
+                    },
+                    onClick: function(){} // Callback after click
+                }).showToast();
             }
         })
     } else { 
         //EN CASO DE QUE NO ESTÉ, AGREGAMOS AL CARRITO
         const item = stockProductos.find((prod) => prod.id === prodId)
         //Trabajamos con las ID
+        Toastify({
+            text: "Agregado al carrito correctamente",
+            duration: 3000,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+            background: "linear-gradient(to right, rgb(207, 27, 27), rgb(17, 14, 14))",
+            },
+            onClick: function(){} // Callback after click
+        }).showToast();
         //Una vez obtenida la ID, lo que haremos es hacerle un push para agregarlo al carrito
         carrito.push(item)
     }
@@ -125,7 +151,7 @@ const actualizarCarrito = () => {
         <p>${prod.nombre}</p>
         <p>Precio: $${prod.precio}</p>
         <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
-        <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+        <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar">X</button>
         `
 
         contenedorCarrito.appendChild(div)
@@ -140,3 +166,8 @@ const actualizarCarrito = () => {
     //empezando en 0.
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
 }
+
+
+
+
+// redondear los bordes de los botones y las imagenes

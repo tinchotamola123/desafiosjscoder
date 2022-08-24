@@ -149,12 +149,20 @@ header {
   text-align: center;
 }
 .botonCompra{
-  text-align: center;
-  text-decoration: none;
   border: none;
-  color: azure;
-  background-color: black;
-}
+  background-color: rgba(219, 43, 20, 0.726);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 5px;
+  border-radius: 20px;
+  }
+  .botonCompra:hover {background-color: #4e0202}
+  .botonCompra:active {
+    background-color: #4e0202;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 .imgCarro{
 width: 100px;
 height: 100px;
@@ -168,52 +176,65 @@ color: aliceblue;
 img {
 width: 100%;
 margin-bottom: 10px;
+border-radius: 50%;
 }
 h1 {
-color: rgb(233, 10, 10);
-text-transform: uppercase;
+color: rgba(247, 12, 12, 0.5);
 font-weight: 400;
 font-size: 35px;
 text-align: center;
 }
 .boton-carrito {
 border: none;
-color: rgb(255, 5, 5);
+color: rgba(247, 12, 12, 0.5);
 font-size: 35px;
-background-color: rgb(46, 46, 46);
 display: flex;
-justify-content: center;
+justify-content: space-around;
+}
+.boton-eliminar{
+
 }
 
-.botonCompra {
-background-color: rgb(243, 31, 3);
-color: white;
-font-size: 18px;
-font-weight: 700;
-padding: 5px;
-border: none;
+#contenedorProductos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-.botonbotonCompra:hover {
-cursor: pointer;
+.precioProducto{
+  font-size: 30px;
+  text-decoration: underline;
 }
-.botonCompra:focus {
-outline: none;
+.productoEnCarrito p{
+  font-size: 20px;
 }
+.boton-agregar{
+  background-color: rgba(207, 51, 30, 0.664);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 5px;
+  border: none;
+  border-radius: 20px
+}
+.boton-agregar:hover {background-color: #4e0202}
+.boton-agregar:active {
+  background-color: #4e0202;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.total-carrito{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
 
+}
 .productoEnCarrito {
 margin: 25px 0;
 padding: 25px 10px;
 display: flex;
 justify-content: space-between;
 }
-
 .contenedorProducto{
 display: flex;
-}
-
-.boton-eliminar {
-background-color: white;
-color: red;
-border: none;
-font-size: 50px;
 }

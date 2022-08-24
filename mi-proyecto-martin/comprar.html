@@ -31,7 +31,8 @@
         content="Full Sushi. Conoce nuestras piezas: Clásicas, Cocidas, Hot Rolls, Sin arroz, Niguiri y Geisha.">
     <meta name="keywords"
         content="SUSHI, LOCAL SUSHI, SUSHI PREMIUM, MENDOZA,NUESTRAS PIEZAS, CLÁSICOS, COCIDOS, HOT ROLLS, SIN ARROZ, NIGUIRI, GEISHA">
-    <script src="./js/carrito.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <script src="./js/carrito.js" defer></script>
     <!--<script src="./js/index.js" defer></script>-->
     <title>Nuestros Productos | Full Sushi</title>
 </head>
@@ -83,18 +84,21 @@
             </div>
         </section>
 
-        <h1 id="titulo" class="titulo">Carrito Contador</h1>
+        <h1 id="titulo" class="titulo">Productos en el Carrito </h1>
         <span class="boton-carrito" id="contadorCarrito">0</span>
 
         <section class="carritoLista">
         <div class="">
             <div class="">
-                <h3>Carrito</h3>
+                <h3>Productos</h3>
                 <div id="carrito-contenedor">
 
                 </div>
+                <div class="total-carrito">
                 <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
                 <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+                </div>
+
             </div>
         </div>
         </section>
@@ -127,6 +131,8 @@
     </footer>
 
     <!-- scrip boostrap -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
